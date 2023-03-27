@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+}
+
+.form-main-box{
+    background: url(bg-img.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.grid-container{
+    display: grid;
+    /* grid-template-rows: 150px 150px 150px;
+    grid-template-columns: 150px 150px 150px; */
+    /* grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr); */
+    grid-template-columns: 1fr 450px 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 600px;
+    width: 100%;
+    row-gap: 15px;
+    column-gap: 15px;
+    align-items: center;
+}
+
+/* .item{
+    border: 1px solid #000;
+} */
+
+.item-2{
+    position: relative;
+    place-self: center;
+    height: 400px;
+    width: 400px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    border-radius: 20px;
+    /* border: 1px solid #ccc; */
+    box-shadow: 0 0 10px 0 rgba(0,0,0, 10%);
+    background-color: #f7f7f796;
+    margin-top: 60px;
+    padding: 60px 50px 50px 50px;
+}
+
+.item-2::before {
+    content: '';
+    width: 120px;
+    height: 120px;
+    background-image: url(user.png);
+    background-size: 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: -80px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.item-2::after {
+    content: '';
+    width: 140px;
+    height: 140px;
+    background: linear-gradient( 90deg, #ba8dff 0%, #7125e7 100%);
+    position: absolute;
+    top: -90px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border-radius: 50%;
+    z-index: 0;
+    border: 8px solid #d3eeff;
+}
+
+.item-2 label, .item-2 input{
+    width: 100%;
+}
+
+.custom-btn{
+    text-align: center;
+}
+
+.custom-btn {
+    padding: 8px 0 !important;
+    border-radius: 20px !important;
+    background: linear-gradient( 90deg, #ba8dff 0%, #7125e7 100%);
+    border: 0 !important;
+    width: 170px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+
+.btn-box{
+    text-align: center;
+}
+
+input:focus {
+    box-shadow: none !important;
+    border: 1px solid #7e37eb !important;
+    outline: none;
+}
+
+span#user {
+    font-size: 12px;
+    color: red;
+}
+
+span#password {
+    font-size: 12px;
+    color: red;
+}
