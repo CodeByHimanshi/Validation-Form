@@ -17,7 +17,8 @@
             <div class="grid-container">
                 <div class="item item-1"></div>
                 <div class="item item-2">
-                    <form name="myForm" method="post" action="javascript:alert('Submitted Successfully')" onsubmit="return returnValue()">
+                    <form name="myForm" method="post" action="javascript:alert('Submitted Successfully')"
+                        onsubmit="return returnValue()">
                         <div class="mb-3 row">
                             <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
                             <div class="col-sm-12">
@@ -47,17 +48,23 @@
         crossorigin="anonymous"></script>
 
     <script>
-        function returnValue(){
+        function returnValue() {
             var user = document.myForm.user.value;
             var password = document.myForm.password.value;
 
-            if(user == null || user == ""){
+            if (user == null || user == "") {
                 document.getElementById("user").innerHTML = "Name can't be blank";
                 return false;
             }
-            else if(password.length < 6){
-                document.getElementById("password").innerHTML = "Password must be at least 6 characters long.";
-                return false;
+            else {
+                if (password.length < 6) {
+                    document.getElementById("password").innerHTML = "Password must be at least 6 characters long.";
+                    return false;
+                }
+                else {
+                    document.getElementById("user").innerHTML = "";
+                    document.getElementById("password").innerHTML = "";
+                }
             }
         }
     </script>
